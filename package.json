@@ -1,0 +1,16 @@
+{
+  "name": "bala-string-utils",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Balaprasad",
+  "license": "MIT",
+  "description": "A collection of string utilities",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balaprasad370/bala-string-utils.git"
+  }
+}
