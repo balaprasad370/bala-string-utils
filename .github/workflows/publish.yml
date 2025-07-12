@@ -1,0 +1,28 @@
+name: bala-string-utils
+
+on:
+  push:
+    tags:
+      - 'v*'    # only run on tags like v1.0.0
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+
+      - run: npm ci  # install dependencies using package-lock.json
+
+      # - run: npm test # optional: run tests
+      #   continue-on-error: true
+
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

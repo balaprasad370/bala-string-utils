@@ -7,6 +7,15 @@ function capitalize(str) {
     }).join(' ');
 }
 
+
+function reverse(str) {
+    if (typeof str !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+    return str.split('').reverse().join('');
+}
+
 module.exports = {
-    capitalize
+    capitalize,
+    reverse
 };
