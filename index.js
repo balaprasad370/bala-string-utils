@@ -8,6 +8,23 @@ function capitalize(str) {
 }
 
 
+function lowercase(str) {
+    if (typeof str !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+    return str.toLowerCase();
+}
+
+function uppercase(str) {
+    if (typeof str !== 'string') {
+        throw new TypeError('Expected a string');
+    }
+    return str.toUpperCase();
+}
+
+
+
+
 function reverse(str) {
     if (typeof str !== 'string') {
         throw new TypeError('Expected a string');
@@ -18,5 +35,7 @@ function reverse(str) {
 
 module.exports = {
     capitalize,
+    lowercase,
+    uppercase,
     reverse
 };
